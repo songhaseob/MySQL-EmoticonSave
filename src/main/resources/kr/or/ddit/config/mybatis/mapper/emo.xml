@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="emo">
+	
+	<!-- 	이모지 조회 -->
+	<select id="selectemo" resultType="emoVo">
+		SELECT * FROM test
+	</select>
+	
+	<!-- 	이모지 등록 -->
+	<insert id="insertEmo" parameterType="emoVo">
+		INSERT INTO test (emo)
+		VALUES( #{emo})
+	</insert>
+	
+	
+</mapper>
